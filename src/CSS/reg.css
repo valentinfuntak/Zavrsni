@@ -1,22 +1,3 @@
-/* CSS reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 10px;
-    overflow: hidden;
-}
-
-
 .container-custom {
     padding-left: 300px;
     padding-right: 300px;
@@ -116,33 +97,6 @@ body {
     text-decoration: underline;
 }
 
-
-@media (max-width: 768px) {
-    .card-custom {
-        padding: 40px;
-        max-width: 90%;
-        min-width: unset;
-    }
-
-    .form-title {
-        font-size: 24px;
-    }
-
-    .input-field {
-        padding: 14px;
-        font-size: 15px;
-    }
-
-    .register-btn {
-        padding: 12px;
-        font-size: 16px;
-    }
-
-    .checkbox-label {
-        font-size: 15px;
-    }
-}
-
 .link-button {
     background: none;
     color: #007bff;
@@ -157,14 +111,6 @@ body {
     text-decoration: underline;
 }
 
-#three-canvas {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
 
 .glass-container {
     min-width: 650px;
@@ -178,4 +124,56 @@ body {
     border-top: 3px, solid rgbA(0, 0, 0, 0.01);
     box-shadow: 0 8px 32px 0 rgbA(0, 0, 0, 0.38);
     z-index: 2;
+}
+
+/* Media query za manje zaslone (mobilni uređaji) */
+@media (max-width: 768px) {
+    .container-custom {
+        padding: 0 10vw; /* Smanji padding za mobilne uređaje */
+    }
+
+    .card-custom {
+        padding: 5vw;
+        min-width: 90vw; /* Omogućuje skaliranje na užim zaslonima */
+    }
+
+    .form-title {
+        font-size: 5vw; /* Smanjenje fonta na mobilnim uređajima */
+    }
+
+    .input-field {
+        padding: 4vw;
+        font-size: 3.5vw;
+    }
+
+    .register-btn {
+        padding: 3vw;
+        font-size: 3vw;
+    }
+}
+
+/* Media query za vrlo male zaslone (ispod 480px) */
+@media (max-width: 480px) {
+    .container-custom {
+        padding: 0 5vw;
+    }
+
+    .card-custom {
+        padding: 4vw;
+        min-width: 95vw;
+    }
+
+    .form-title {
+        font-size: 6vw;
+    }
+
+    .input-field {
+        padding: 5vw;
+        font-size: 4vw;
+    }
+
+    .register-btn {
+        padding: 4vw;
+        font-size: 4vw;
+    }
 }
